@@ -1,0 +1,49 @@
+<div class="card bg-warning">
+    <form #Addauthor="ngForm" (ngSubmit)="AddAuthor()">
+
+    <div class="card-title">
+        <h3>{{title}}</h3>
+    </div>
+    <div class="card-body">
+    <div class="table-responsive">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><label>Author Name</label></td>
+                    <td><input type="text" name="authname" [(ngModel)]="authorDetails.authorName" #authname="ngModel" required>
+                    </td>
+            
+            
+                </tr>
+                <tr>
+                    <td><label>Famous Books</label></td>
+                    <td><input type="text" name="fambooks" [(ngModel)]="authorDetails.famousBook" required #fambooks="ngModel">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Nationality</label></td>
+                    <td><input type="text" name="nationality" [(ngModel)]="authorDetails.nationality" required #nationality="ngModel">
+    
+                    </td>
+             </tr>
+
+                <tr>
+                    <td><label>Image</label></td>
+                    <td><input type="text" name="Image" [(ngModel)]="authorDetails.image" required  #Image="ngModel">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit" [disabled]="!Addauthor.valid"></td>
+                </tr>
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+    </div>
+</form>
+
+</div>

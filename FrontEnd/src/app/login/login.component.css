@@ -1,0 +1,71 @@
+.main  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-image:url("https://image.shutterstock.com/image-photo/luxury-library-600w-593652374.jpg");
+    font-family: 'Arial';
+    background-size: cover;  
+    background-repeat: no-repeat;
+}  
+.login{  
+        width: 450px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 15 0 0 450px;  
+        padding: 70px;  
+        background: #ffc107;  
+        border-radius: 15px ;  
+          
+}  
+
+h3{
+    text-align: center;  
+    color:black;
+}
+h2{  
+    text-align: center;  
+    color:black;
+    padding: 20px;  
+}  
+label{  
+    color: black;  
+    font-size: 17px;  
+}  
+#uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+  
+  
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+a{  
+    float: left;  
+    color:white;  
+    opacity:0.8
+
+}
+a:hover{
+    opacity:1
+}

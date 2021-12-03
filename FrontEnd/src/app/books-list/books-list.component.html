@@ -1,0 +1,39 @@
+<div class="card bg-warning main">
+    <div class="card-header ">
+       <h3> {{title}}</h3>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                        Show Image
+                        </th>
+                        <th>Book Title</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books">
+                    <td><img [src] = 'book.image' 
+                            [title] = 'book.bookTitle'
+                            [style.width.px] = 'imageWidth' 
+                            [style.margin.px] = 'imageMargin'></td>
+                        <td>{{book.bookTitle}}</td>
+                        <td>{{book.bookAuthor}}</td>
+                        <td>{{book.genre}}</td>
+                        
+<td><button class="btn btn-info" style="cursor:pointer" *ngIf="_auth.loggedIn() && _auth.isAllowed()" (click)="editBook(book)" style="margin-left:20px">Edit</button>
+<button class="btn btn-danger" style="cursor:pointer" style="margin-left:20px" *ngIf="_auth.loggedIn() && _auth.isAllowed()" (click)="deleteBook(book)"  >Delete</button>
+
+                         </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

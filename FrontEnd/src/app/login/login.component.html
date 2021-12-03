@@ -1,0 +1,33 @@
+
+<div class="main">
+<div class="login">
+    <h3><b>Library Login</b></h3>    
+    <form id="login" #login="ngForm" (ngSubmit)="loginVerify()">   
+       <label><b>User Name     
+        </b>    
+        </label>    
+        <input type="text" name="uname" id="uname" placeholder="Username" [(ngModel)]="user.uname" required #uname="ngModel" >    
+        <small  style="color:red"class="form-text" *ngIf="uname.touched && !uname.valid">Enter UserName</small>
+
+        <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="Password" name="pwd" id="Pass" placeholder="Password" [(ngModel)]="user.pwd" minlength="5" maxlength="10" required  #pwd="ngModel">    
+        <small  style="color:red"class="form-text" *ngIf="pwd.touched && !pwd.valid">Enter UserName</small>
+
+        <br><br>    
+        <button type="submit" name="log" id="log"[disabled]="!login.valid">Login Here</button>
+    
+        <br><br>    
+        <input type="checkbox" id="check">    
+        <span>Remember me</span> 
+        <br><br>    
+     
+        <br><br>    
+         <a href="#">ForgotPassword</a>  
+         <br><br>    
+  
+    </form>  
+</div>
+</div>

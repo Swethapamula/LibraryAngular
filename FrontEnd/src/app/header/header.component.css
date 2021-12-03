@@ -1,0 +1,16 @@
+nav{
+    color:white;
+
+}
+
+a{
+    color:white;
+    text-decoration:none;
+    opacity:0.8;
+
+}
+
+a:hover{
+    opacity:1;
+
+}

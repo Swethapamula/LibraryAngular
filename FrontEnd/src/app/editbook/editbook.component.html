@@ -1,0 +1,45 @@
+<div class="card">
+    <form  #editbook="ngForm" (ngSubmit)="EditBook()">
+    <div class="card-title bg-warning">
+        <h3>{{title}}</h3>
+    </div>
+    <div class="card-body bg-warning">
+    <div class="table-responsive">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><label>Book Title</label></td>
+                    <td><input type="text"  name="bname" [(ngModel)]="bookDetail[0].bookTitle" ngModel required></td>
+                </tr>
+                <tr>
+                    <td><label>Book Author</label></td>
+                    <td><input type="text" name="bAuthor" [(ngModel)]="bookDetail[0].bookAuthor" ngModel required></td>
+                </tr>
+                <tr>
+                    <td><label>Genre</label></td>
+                    <td><input type="text" name="b_Genere" [(ngModel)]="bookDetail[0].genre" ngModel required></td>
+                </tr>
+                <tr>
+                    <td><label>Image</label></td>
+                    <td><input type="text" name="b_Image" [(ngModel)]="bookDetail[0].image" ngModel required>
+                        <span><img [src] = 'bookDetail[0].image' 
+                            [title] = 'bookDetail[0].bookTitle'
+                            [style.width.px] = 'imageWidth' 
+                            [style.margin.px] = 'imageMargin'>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"[disabled]="!editbook.valid"></td>
+                </tr>
+
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+    </div>
+</form>
+</div>

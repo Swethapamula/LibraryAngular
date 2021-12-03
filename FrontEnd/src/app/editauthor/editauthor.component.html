@@ -1,0 +1,44 @@
+<div class="card">
+    <form #updateauthor="ngForm" (ngSubmit)="editAuthor()">
+
+    <div class="card-title bg-warning">
+        <h3>{{title}}</h3>
+    </div>
+    <div class="card-body bg-warning">
+    <div class="table-responsive">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><label>Author Name</label></td>
+                    <td><input type="text" name="name" [(ngModel)]="authorDetails[0].authorName" required ngModel ></td>
+                </tr>
+                <tr>
+                    <td><label>Famous Books</label></td>
+                    <td><input type="text" name="fambooks" [(ngModel)]="authorDetails[0].famousBook" required ngModel ></td>
+                </tr>
+                <tr>
+                    <td><label>Nationality</label></td>
+                    <td><input type="text" name="nationality" [(ngModel)]="authorDetails[0].nationality" required ngModel></td>
+                </tr>
+                <tr>
+                    <td><label>Image</label></td>
+                    <td><input type="text" name="image" [(ngModel)]="authorDetails[0].image"  required ngModel><span><img [src] = 'authorDetails[0].image' 
+                        [title] = 'authorDetails[0].authorName'
+                        [style.width.px] = 'imageWidth' 
+                        [style.margin.px] = 'imageMargin'>
+                    </span></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit" [disabled]="!updateauthor.valid"></td>
+                </tr>
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+    </div>
+</form>
+
+</div>
