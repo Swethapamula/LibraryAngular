@@ -2,7 +2,7 @@ const express= require('express');
 const app= new express();
 const  cors =require("cors");
 const jwt = require("jsonwebtoken");
-var port = 3050;
+const port= process.env.PORT || 3050;
  var authorsData =require("./src/model/authorData");
  var booksData =require("./src/model/bookData");
  var userData=require('./src/model/userData');
@@ -205,9 +205,6 @@ app.put("/editauthor", verifyToken,function(req,res)
 
 
 
-app.listen(port,()=>
-{
-console.log("Listning to port:"+port)
-});
+app.listen(port,()=>{console.log("Server ready at port" +port)});
 
 
